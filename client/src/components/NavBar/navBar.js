@@ -4,8 +4,8 @@ export class NavBar extends Component {
   render() {
     return (
     <div>
-        <div className="row" className="top-bottom-nav"></div>
-        <div className="row" className="middle-nav">
+        <div className="row" id="top-bottom-nav"></div>
+        <div className="middle-nav" >
             <nav className="navbar">
                 <a className="navbar-brand"> Windy City Sports Gifs </a>
                 <a href="/bears" className="badge badge-danger">Bears</a>
@@ -18,7 +18,7 @@ export class NavBar extends Component {
                 </form>
             </nav>
         </div>
-        <div className="row" className="top-bottom-nav"></div>
+        <div className="row" id="top-bottom-nav"></div>
         
        
         

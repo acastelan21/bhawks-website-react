@@ -4,7 +4,7 @@ import "./home.css";
 export class Home extends Component {
   render() {
     return (
-      <div className="container" className="homePage">
+      <div className="container" id="homePage">
         
       </div>
     )
