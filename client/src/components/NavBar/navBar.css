@@ -1,0 +1,17 @@
+.top-bottom-nav {
+    background-color:#58B9F7;
+    height: 40px; 
+}
+.navbar {
+    color:#CC0000;
+}
+
+.form-control {
+    color: #CC0000;
+    border: solid 1px #CC0000;
+
+}
+
+.badge-danger{
+    font-size: 1.2em;
+}
