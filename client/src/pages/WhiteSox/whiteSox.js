@@ -3,7 +3,7 @@ import ComingSoon from "../../components/ComingSoon";
 export class WhiteSox extends Component {
   render() {
     return (
-      <div className="whiteSox">
+      <div className="page whiteSox">
         <ComingSoon/>  
       </div>
     )

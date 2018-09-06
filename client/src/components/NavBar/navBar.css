@@ -2,6 +2,9 @@
     background-color:#58B9F7;
     height: 40px; 
 }
+.middle-nav {
+    background: white;
+}
 .navbar {
     color:#CC0000;
 }

@@ -1,0 +1,17 @@
+.page404 img {
+    margin: auto;
+    padding: 2em;
+    display: block;
+}
+.page404 {
+    text-align: center;
+    margin-top: 2em;
+}
+ 
+.return {
+    margin-bottom: 1em;
+}
+
+.return {
+    background-color: #58B9F7;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Router, Route} from "react-router-dom";
+import {Router, Route, Switch} from "react-router-dom";
 import Wrapper from"./components/Wrapper";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
@@ -12,6 +12,7 @@ import ContactUs from "./pages/ContactUs";
 import history from "./history";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
+import Page404 from "./pages/Page404";
 class App extends Component {
   render() {
     return (
@@ -21,13 +22,16 @@ class App extends Component {
         <Router history={history}>
           <div>
             <NavBar/>
-            <Route exact path ="/" component={Home}/>
-            <Route exact path ="/bears" component={Bears}/>
-            <Route exact path="/blackhawks" component={Blackhawks}/>
-            <Route exact path="/cubs" component={Cubs}/>
-            <Route exact path="/white-sox" component={WhiteSox}/>
-            <Route path="/contact-us" component={ContactUs}/>
-            <Route path="/about-us" component={AboutUs}/>
+            <Switch>
+              <Route exact path ="/" component={Home}/>
+              <Route exact path ="/bears" component={Bears}/>
+              <Route exact path="/blackhawks" component={Blackhawks}/>
+              <Route exact path="/cubs" component={Cubs}/>
+              <Route exact path="/white-sox" component={WhiteSox}/>
+              <Route path="/contact-us" component={ContactUs}/>
+              <Route path="/about-us" component={AboutUs}/>
+              <Route component={Page404}/>
+            </Switch>
             <Footer/>
           </div>
 

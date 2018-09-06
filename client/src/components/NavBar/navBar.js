@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import "./navBar.css";
 import {Link} from "react-router-dom";
+
 export class NavBar extends Component {
   render() {
     return (
-    <div>
-        <div className="row" id="top-bottom-nav"></div>
+    <div className="navi">
+        <div className="row" id="top-bottom-nav">
+       
+        </div>
         <div className="middle-nav" >
             <nav className="navbar">
                 <a href="/" className="navbar-brand"> Windy City Sports Gifs </a>
