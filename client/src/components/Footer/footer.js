@@ -20,16 +20,17 @@ export class Footer extends Component {
                     <Link to="/cubs">Cubs</Link>
                     <Link to="/white-sox">White Sox</Link>
                     <Link to="/contact-us">Contact Us</Link>
+                    <Link to="/about-us">About Us</Link>
                 
             </div>
         </div>
         {/* social media */}
         <div className="row">
             <div className="col-12">
-                <div class="social-icon">
-                        <a href="/"><span><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i></span></a>
-                        <a href="/"><span><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i></span></a>
-                        <a href="/"><span><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></span></a>
+                <div className="social-icon">
+                        <a href="/"><span><i className="fab fa-twitter-square fa-2x" aria-hidden="true"></i></span></a>
+                        <a href="/"><span><i className="fab fa-facebook-square fa-2x" aria-hidden="true"></i></span></a>
+                        <a href="/"><span><i className="fab fa-instagram fa-2x" aria-hidden="true"></i></span></a>
                 </div>
             
             </div>

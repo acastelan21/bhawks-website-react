@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import ComingSoon from "../../components/ComingSoon";
-export class ContactUs extends Component {
+export class Page404 extends Component {
   render() {
     return (
-      <div className="contactUs">
+      <div className="page404">
         <ComingSoon/>
         
       </div>
@@ -11,4 +11,4 @@ export class ContactUs extends Component {
   }
 }
 
-export default ContactUs
+export default Page404

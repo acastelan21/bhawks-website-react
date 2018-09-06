@@ -5,6 +5,10 @@
 .navbar {
     color:#CC0000;
 }
+.navbar a {
+    color: #CC0000;
+}
+
 
 .form-control {
     color: #CC0000;
@@ -15,3 +19,4 @@
 .badge-danger{
     font-size: 1.2em;
 }
+

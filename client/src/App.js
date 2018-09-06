@@ -11,6 +11,7 @@ import WhiteSox from "./pages/WhiteSox";
 import ContactUs from "./pages/ContactUs";
 import history from "./history";
 import Footer from "./components/Footer";
+import AboutUs from "./pages/AboutUs";
 class App extends Component {
   render() {
     return (
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/cubs" component={Cubs}/>
             <Route exact path="/white-sox" component={WhiteSox}/>
             <Route path="/contact-us" component={ContactUs}/>
+            <Route path="/about-us" component={AboutUs}/>
             <Footer/>
           </div>
 

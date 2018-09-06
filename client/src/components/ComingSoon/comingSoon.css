@@ -1,0 +1,7 @@
+.comingSoonContainer{
+    background-image: url("../../assets/images/under-construction.gif");
+    background-position: center;
+    background-size: cover;
+    width:101%;
+    height: 40em;
+}
