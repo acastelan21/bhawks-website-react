@@ -1,0 +1,8 @@
+.card {
+    margin: 4em;
+    text-align: center
+}
+
+button.btn.btn-primary {
+    background-color: white
+}
