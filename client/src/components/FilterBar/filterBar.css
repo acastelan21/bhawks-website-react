@@ -1,0 +1,9 @@
+.nav text {
+    margin: .5em 0px;
+}
+
+ul.nav.nav-tabs {
+    width:50%;
+    margin: auto;
+
+}

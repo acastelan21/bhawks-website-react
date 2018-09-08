@@ -13,6 +13,7 @@ import history from "./history";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Page404 from "./pages/Page404";
+
 class App extends Component {
   render() {
     return (
