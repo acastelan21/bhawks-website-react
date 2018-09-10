@@ -44,7 +44,7 @@ export default class Example extends React.Component {
     return (
       <div>
         <Nav tabs>
-        <text>Filter By: </text>
+        <p>Filter By: </p>
           <Dropdown nav isOpen={this.state.dropdownOpenSeason} toggle={this.toggleSeason}>
             <DropdownToggle nav caret>
               Season
