@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-const db = process.env.MONGODB_URI || "mongodb://localhost:27017/chicago";
+const db = process.env.MONGODB_URI || "mongodb://localhost:27017/chicago-sports-website";
 mongoose.connect(db, function(error){
   if (error){
     console.error(error);
