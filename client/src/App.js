@@ -13,7 +13,8 @@ import history from "./history";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Page404 from "./pages/Page404";
-
+import Provider from "./providers";
+import Consumer from "./consumer";
 class App extends Component {
   render() {
     return (
@@ -21,8 +22,11 @@ class App extends Component {
         
         {/* Routing for Pages */}
         <Router history={history}>
+
           <div>
-            <NavBar/>
+            <Provider>
+              
+              <NavBar/>
             <Switch>
               <Route exact path ="/" component={Home}/>
               <Route exact path ="/bears" component={Bears}/>
@@ -34,6 +38,9 @@ class App extends Component {
               <Route component={Page404}/>
             </Switch>
             <Footer/>
+              
+            </Provider>
+           
           </div>
 
         </Router>
