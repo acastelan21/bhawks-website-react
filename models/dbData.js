@@ -7,6 +7,7 @@ const dbDataSchema = new Schema({
     position: String,
     gifs: [{
         season: String,
+        highlight: String,
         gifLink: String,
         date: String,
         opponent: String

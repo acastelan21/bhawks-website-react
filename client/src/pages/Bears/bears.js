@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FilterBar from "../../components/FilterBar";
 import {ThemeContext} from "../../providers";
-
+import PlayerCard from "../../components/PlayerCard";
 export class Bears extends Component {
  
   
@@ -15,21 +15,34 @@ export class Bears extends Component {
       <ThemeContext.Consumer>
         {(context) => (
           <div>
-            {context.BearsData.allData[0].gifs[0].season}
-          {context.BearsData.allData.map((info,i)=> (
+          {context.BearsData.allData.map((info, i)=> (
             <div key={i}>
-           
-            <p>{i} {info.player}  </p>
-            <p>{i}.1  {info.position}</p>
-            {info.gifs.map((nested, i)=>(
-              <div>{i}.2 {nested.gifLink}</div>
+            {info.gifs.map((nested,j)=>(
+
+              <PlayerCard
+          key={j}
+          player = {info.player}
+          position ={info.position}
+          season = {nested.season}
+          date ={ nested.date}
+          opponent={nested.opponent}
+          highlight={nested.highlight}
+          gifLink={nested.gifLink}
+
+            />
+
+
             ))}
-       
-          </div>
+            </div>
+
+          ))}
+           
+
+
+
+            </div>
+
           
-          
-        ))}
-          </div>
           
           
         )}
