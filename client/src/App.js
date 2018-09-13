@@ -22,11 +22,13 @@ class App extends Component {
         
         {/* Routing for Pages */}
         <Router history={history}>
+        <React.Fragment>
+          <NavBar/>
+          <div className="OverallContainer">
 
-          <div>
             <BearsProvider>
               
-              <NavBar/>
+              
             <Switch>
               <Route exact path ="/" component={Home}/>
               <Route exact path ="/bears" component={Bears}/>
@@ -42,7 +44,7 @@ class App extends Component {
             </BearsProvider>
            
           </div>
-
+          </React.Fragment>
         </Router>
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardImg, CardBody,
     CardTitle, CardSubtitle} from 'reactstrap'; 
-
+import "./playerCard.css";
 
 
 const PlayerCard =(props) => {
