@@ -1,25 +1,34 @@
 import React from 'react';
+import axios from "axios";
 
-const DEFAULT_STATE = 
-    {
-      name: "Mitchell Trubisky",
-      position: "QB",
-      gif: "www.google.com"
-    }
-    
-  
 
-export const ThemeContext = React.createContext(DEFAULT_STATE);
+export const ThemeContext = React.createContext();
 
 export default class Provider extends React.Component{
-    state = DEFAULT_STATE;
+    constructor(){
+        super();
+        this.state={
+          allData: []
+        }
+                
+        
+      }
+        componentWillMount(){
+          axios.get("/api/database").then(res=>{
+            console.log("res.data", res.data)
+            this.setState({allData: res.data})
+            
+          })
+        }
     
 
 
 render() {
+  const BearsData = this.state
+  console.log("bears data", BearsData); 
     return (
         <ThemeContext.Provider value={{
-            ...this.state
+            BearsData : BearsData
         }}>{this.props.children}</ThemeContext.Provider>
     )
 }

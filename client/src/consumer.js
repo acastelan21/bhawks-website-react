@@ -7,7 +7,7 @@ export default class Consumer extends React.Component {
         return(
             <ThemeContext.Consumer>
                 {(context)=>(
-                    <p>{context.name}</p>
+                    <p>{context[0].name}</p>
                 )}
             </ThemeContext.Consumer>
         )
