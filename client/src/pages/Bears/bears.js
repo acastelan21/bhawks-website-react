@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FilterBar from "../../components/FilterBar";
-import {ThemeContext} from "../../providers";
+import {BearsContext} from "../../contexts/bearsProviders";
 import PlayerCard from "../../components/PlayerCard";
 export class Bears extends Component {
  
@@ -12,7 +12,7 @@ export class Bears extends Component {
     return (
       <div className="page bears">
       <FilterBar/>
-      <ThemeContext.Consumer>
+      <BearsContext.Consumer>
         {(context) => (
           <div>
           {context.BearsData.allData.map((info, i)=> (
@@ -24,7 +24,7 @@ export class Bears extends Component {
           player = {info.player}
           position ={info.position}
           season = {nested.season}
-          date ={ nested.date}
+          date = {nested.date}
           opponent={nested.opponent}
           highlight={nested.highlight}
           gifLink={nested.gifLink}
@@ -47,7 +47,7 @@ export class Bears extends Component {
           
         )}
        
-      </ThemeContext.Consumer> 
+      </BearsContext.Consumer> 
       </div>
     )
   }

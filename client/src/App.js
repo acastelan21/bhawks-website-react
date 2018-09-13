@@ -13,8 +13,8 @@ import history from "./history";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Page404 from "./pages/Page404";
-import Provider from "./providers";
-import Consumer from "./consumer";
+import BearsProvider from "./contexts/bearsProviders";
+
 class App extends Component {
   render() {
     return (
@@ -24,7 +24,7 @@ class App extends Component {
         <Router history={history}>
 
           <div>
-            <Provider>
+            <BearsProvider>
               
               <NavBar/>
             <Switch>
@@ -39,7 +39,7 @@ class App extends Component {
             </Switch>
             <Footer/>
               
-            </Provider>
+            </BearsProvider>
            
           </div>
 

@@ -10,11 +10,13 @@ export default class Example extends React.Component {
     this.toggleName= this.toggleName.bind(this);
     this.toggleOpponent = this.toggleOpponent.bind(this);
     this.togglePosition = this.togglePosition.bind(this);
+    this.toggleHighlights = this.toggleHighlights.bind(this);
     this.state = {
       dropdownOpenSeason: false,
       dropdownOpenName: false,
       dropdownOpenOpponent: false,
-      dropdownOpenPosition: false
+      dropdownOpenPosition: false,
+      dropdownOpenHighlights: false
     };
   }
 
@@ -38,6 +40,11 @@ export default class Example extends React.Component {
       this.setState({
           dropdownOpenPosition: !this.state.dropdownOpenPosition
       })
+  }
+  toggleHighlights(){
+    this.setState({
+      dropdownOpenHighlights: !this.state.dropdownOpenHighlights
+    })
   }
 
   render() {
@@ -82,6 +89,14 @@ export default class Example extends React.Component {
             <DropdownMenu>
               <DropdownItem>Quarterback (QB)</DropdownItem>
               <DropdownItem>Runningback (RB)</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+          <Dropdown nav isOpen={this.state.dropdownOpenHighlights} toggle={this.toggleHighlights}>
+            <DropdownToggle nav caret>
+              Highlights
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem>Touchdown</DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </Nav>

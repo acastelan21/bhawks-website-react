@@ -2,7 +2,7 @@ import React from 'react';
 import axios from "axios";
 
 
-export const ThemeContext = React.createContext();
+export const BearsContext = React.createContext();
 
 export default class Provider extends React.Component{
     constructor(){
@@ -27,9 +27,9 @@ render() {
   const BearsData = this.state
   console.log("bears data", BearsData); 
     return (
-        <ThemeContext.Provider value={{
+        <BearsContext.Provider value={{
             BearsData : BearsData
-        }}>{this.props.children}</ThemeContext.Provider>
+        }}>{this.props.children}</BearsContext.Provider>
     )
 }
 }
