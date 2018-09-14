@@ -5,6 +5,7 @@ const dbDataSchema = new Schema({
     _id: String,
     player: String,
     position: String,
+    number: String,
     gifs: [{
         season: String,
         highlight: String,

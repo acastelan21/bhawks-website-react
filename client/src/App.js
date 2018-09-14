@@ -6,8 +6,6 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Bears from "./pages/Bears";
 import Blackhawks from "./pages/Blackhawks";
-import Cubs from "./pages/Cubs";
-import WhiteSox from "./pages/WhiteSox";
 import ContactUs from "./pages/ContactUs";
 import history from "./history";
 import Footer from "./components/Footer";
@@ -33,8 +31,6 @@ class App extends Component {
               <Route exact path ="/" component={Home}/>
               <Route exact path ="/bears" component={Bears}/>
               <Route exact path="/blackhawks" component={Blackhawks}/>
-              <Route exact path="/cubs" component={Cubs}/>
-              <Route exact path="/white-sox" component={WhiteSox}/>
               <Route path="/contact-us" component={ContactUs}/>
               <Route path="/about-us" component={AboutUs}/>
               <Route component={Page404}/>

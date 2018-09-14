@@ -1,3 +1,5 @@
 .card {
     margin: .5em;
+    width:45%;
+    float: left;
 }

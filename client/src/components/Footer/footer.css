@@ -2,7 +2,8 @@
     background-color:#58B9F7;
     text-align: center;
     bottom:0;
-    width:101%
+    width:101%;
+    clear:both;
 }
 .col-12 a {
     margin: 1em;

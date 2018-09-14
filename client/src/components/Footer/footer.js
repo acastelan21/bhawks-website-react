@@ -8,7 +8,7 @@ export class Footer extends Component {
     <div className="footer">
        {/* website name */}
         <div className="row">
-            <div className="col-12"> <Link to="/">Windy City Sports Gifs</Link></div>
+            <div className="col-12"> <Link to="/">Chicago Sports Gifs</Link></div>
         </div>
         {/* links to other parts of site */}
         
@@ -17,8 +17,6 @@ export class Footer extends Component {
                     <Link to="/home">Home</Link>
                     <Link to="/bears">Bears</Link>
                     <Link to="/blackhawks">Blackhawks</Link>
-                    <Link to="/cubs">Cubs</Link>
-                    <Link to="/white-sox">White Sox</Link>
                     <Link to="/contact-us">Contact Us</Link>
                     <Link to="/about-us">About Us</Link>
                 

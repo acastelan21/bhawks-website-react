@@ -11,11 +11,9 @@ export class NavBar extends Component {
         </div>
         <div className="middle-nav" >
             <nav className="navbar">
-                <a href="/" className="navbar-brand"> Windy City Sports Gifs </a>
+                <a href="/" className="navbar-brand"> Chicago Sports Gifs </a>
                     <Link to="/bears">Bears</Link>
                     <Link to="/blackhawks">Blackhawks</Link>
-                    <Link to="/cubs">Cubs</Link>
-                    <Link to="/white-sox">White Sox</Link>
                     <Link to="/contact-us">Contact Us</Link>
                     <Link to="/about-us"> About Us</Link>
                 <form className="form-inline">

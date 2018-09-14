@@ -19,15 +19,16 @@ export class Bears extends Component {
             
             {/* The first map to access first level of array of data in state */}
           {context.BearsData.allData.map((info, i)=> (
-            <div className = "row" key={i}>
+            <div key={i}>
             {/* the second map is to access the nested array inside data of state */}
-            {info.gifs.map((nested,j)=>(
+            {info.gifs.map((nested,j,k)=>(
               
-              <div className="col-6">
+              <div key={j} >
               <PlayerCard
-          key={j}
+          key={k}
           player = {info.player}
           position ={info.position}
+          number ={info.number}
           season = {nested.season}
           date = {nested.date}
           opponent={nested.opponent}
