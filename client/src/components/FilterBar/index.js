@@ -1,1 +1,1 @@
-export {default} from "./filterBar";
+export {default} from "./filterBar"

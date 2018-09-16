@@ -2,7 +2,7 @@ import React from 'react';
 import "./filterBar.css";
 import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu} from 'reactstrap';
 
-export default class Example extends React.Component {
+export default class FilterBar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -57,7 +57,7 @@ export default class Example extends React.Component {
               Season
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem>2017</DropdownItem>
+              
               <DropdownItem>2018</DropdownItem>
             </DropdownMenu>
           </Dropdown>
@@ -65,11 +65,17 @@ export default class Example extends React.Component {
             <DropdownToggle nav caret>
               Player
             </DropdownToggle>
+            
             <DropdownMenu>
-              <DropdownItem>Player1</DropdownItem>
-              <DropdownItem>Player2</DropdownItem>
-              <DropdownItem>Player3</DropdownItem>
-              <DropdownItem>Player4</DropdownItem>
+              
+                <DropdownItem >{this.props.player1}</DropdownItem>
+                <DropdownItem >{this.props.player2}</DropdownItem>
+                <DropdownItem>{this.props.player3}</DropdownItem>
+                <DropdownItem>{this.props.player4}</DropdownItem>
+                <DropdownItem>{this.props.player5}</DropdownItem>
+                <DropdownItem>{this.props.player6}</DropdownItem>
+                
+              
             </DropdownMenu>
           </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpenOpponent} toggle={this.toggleOpponent}>
@@ -77,9 +83,7 @@ export default class Example extends React.Component {
               Opponent
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem>Green Bay Packers</DropdownItem>
-              <DropdownItem>Detroit Lions</DropdownItem>
-              <DropdownItem>Minnesota Vikings</DropdownItem>
+              <DropdownItem>{this.props.team1}</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpenPosition} toggle={this.togglePosition}>
@@ -87,8 +91,11 @@ export default class Example extends React.Component {
               Position
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem>Quarterback (QB)</DropdownItem>
-              <DropdownItem>Runningback (RB)</DropdownItem>
+              <DropdownItem>{this.props.position1}</DropdownItem>
+              <DropdownItem>{this.props.position2}</DropdownItem>
+              <DropdownItem>{this.props.position3}</DropdownItem>
+              <DropdownItem>{this.props.position4}</DropdownItem>
+              <DropdownItem>{this.props.position5}</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpenHighlights} toggle={this.toggleHighlights}>
@@ -96,7 +103,12 @@ export default class Example extends React.Component {
               Highlights
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem>Touchdown</DropdownItem>
+              <DropdownItem>{this.props.highlight1}</DropdownItem>
+              <DropdownItem>{this.props.highlight2}</DropdownItem>
+              <DropdownItem>{this.props.highlight3}</DropdownItem>
+              <DropdownItem>{this.props.highlight4}</DropdownItem>
+              <DropdownItem>{this.props.highlight5}</DropdownItem>
+             
             </DropdownMenu>
           </Dropdown>
         </Nav>
