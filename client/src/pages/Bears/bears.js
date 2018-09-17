@@ -9,7 +9,10 @@ export class Bears extends Component {
     super(props)
     this.state={
       players:[],
-      seasons:[]
+      seasons:[],
+      positions:[],
+      opponents:[],
+      highlights:[]
     }
   }
   componentWillMount(){
@@ -22,33 +25,45 @@ export class Bears extends Component {
       
       //empty array to push player names
       let playersForState = [];
-      //first for loop to first level of array 
+      
+      //loop through all players to make an array to use for filter
       for (let i=0; i<res.data.length ; i++ ){
+
         playersForState.push(res.data[i].player)
+      
+
       }
       this.setState({players:playersForState})
-      //empty array for seasons
-      // let seasonsForState =[];
-      let seasonsForState = new Set();
-      //second for loop this one to get into second level of array 
+      
+      //creating a set so it convert to array to send to set state
+      let positionsForArray = new Set();
+      let seasonsForArray = new Set();
+      let opponentsForArray = new Set();
+      let highlightsForArray = new Set(); 
+      //first for loop to first level of array
       for (let i=0;i<res.data.length; i++){
+        //add unique values for positons to set
+        positionsForArray.add(res.data[i].position)
+        //second for loop this one to get into second level of array 
         for (let j=0;j<res.data[i].gifs.length;j++){
-          seasonsForState.add(res.data[i].gifs[j].season)
+          // add unique values for seasons/opponents/highlights to set
+          seasonsForArray.add(res.data[i].gifs[j].season)
+          opponentsForArray.add(res.data[i].gifs[j].opponent)
+          highlightsForArray.add(res.data[i].gifs[j].highlight)
+          console.log("highlights",highlightsForArray)
           
-          //check to see if season already in array 
-          // if (res.data[i].gifs[j].season.indexOf(seasonsForState)){
-          //   console.log("Repeat")
-          //   }
-          //   else{(seasonsForState.push(res.data[i].gifs[j].season)
-            
-          //     )
-          //   console.log("Pushed:" + i + ":" + j )}
-           
-        
 
-        console.log(res.data[i].gifs[j].season)
       }}
-      console.log("seasons", seasonsForState)
+      //convert set to array for seasons/positions/opponents/highlights
+      let seasonsForState = [...seasonsForArray]
+      let positionsForState =[...positionsForArray]
+      let opponentsForState=[...opponentsForArray]
+      let highlightsForState=[...highlightsForArray]
+      //set state for seasons/positions/opponents/highlights filter
+      this.setState({seasons:seasonsForState})
+      this.setState({positions:positionsForState})
+      this.setState({opponents:opponentsForState})
+      this.setState({highlights:highlightsForState})
     })
 
   }
@@ -66,7 +81,18 @@ export class Bears extends Component {
       player4={this.state.players[3]}
       player5={this.state.players[4]}
       player6={this.state.players[5]}
-      season1={"2018"}
+      season1={this.state.seasons[0]}
+      position1={this.state.positions[0]}
+      position2={this.state.positions[1]}
+      position3={this.state.positions[2]}
+      position4={this.state.positions[3]}
+      position5={this.state.positions[4]}
+      opponent1={this.state.opponents[0]}
+      highlight1={this.state.highlights[0]}
+      highlight2={this.state.highlights[1]}
+      highlight3={this.state.highlights[2]}
+      highlight4={this.state.highlights[3]}
+      highlight5={this.state.highlights[4]}
       
       />
       

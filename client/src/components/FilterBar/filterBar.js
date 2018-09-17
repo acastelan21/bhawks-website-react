@@ -83,7 +83,7 @@ export default class FilterBar extends React.Component {
               Opponent
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem>{this.props.team1}</DropdownItem>
+              <DropdownItem>{this.props.opponent1}</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpenPosition} toggle={this.togglePosition}>
@@ -96,6 +96,7 @@ export default class FilterBar extends React.Component {
               <DropdownItem>{this.props.position3}</DropdownItem>
               <DropdownItem>{this.props.position4}</DropdownItem>
               <DropdownItem>{this.props.position5}</DropdownItem>
+              
             </DropdownMenu>
           </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpenHighlights} toggle={this.toggleHighlights}>
