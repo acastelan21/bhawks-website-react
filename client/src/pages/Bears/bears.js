@@ -12,11 +12,20 @@ export class Bears extends Component {
       seasons:[],
       positions:[],
       opponents:[],
-      highlights:[]
+      highlights:[],
+      filterByInUse: false,
+      filterBy: ""
     }
+    this.toggleFilter = this.toggleFilter.bind(this)
   }
   componentWillMount(){
     this.makeArraysForState()
+  }
+  toggleFilter(event){
+    this.setState({filterByInUse: true,
+                   filterBy: event.target.value
+    })
+    
   }
    makeArraysForState = () => {
      //make axios call to database to retrieve data
@@ -75,6 +84,7 @@ export class Bears extends Component {
       <div className="page bears">
       
       <FilterBar
+      toggleFilter ={this.toggleFilter}
       player1={this.state.players[0]}
       player2={this.state.players[1]}
       player3={this.state.players[2]}
@@ -105,11 +115,12 @@ export class Bears extends Component {
             
             {/* The first map to access first level of array of data in state */}
           {context.BearsData.allData.map((info, i)=> (
+           
             <div key={i}>
             {/* the second map is to access the nested array inside data of state */}
             {info.gifs.map((nested,j,k)=>(
-              
               <div key={j} >
+              {info.player === this.state.filterBy || info.position ===this.state.filterBy || nested.season===this.state.filterBy || nested.opponent ===this.state.filterBy || nested.highlight === this.state.filterBy ? 
               <PlayerCard
           key={k}
           player = {info.player}
@@ -122,9 +133,22 @@ export class Bears extends Component {
           gifLink={nested.gifLink}
 
             />
+            : (this.state.filterBy ===""? <PlayerCard
+            key={k}
+            player = {info.player}
+            position ={info.position}
+            number ={info.number}
+            season = {nested.season}
+            date = {nested.date}
+            opponent={nested.opponent}
+            highlight={nested.highlight}
+            gifLink={nested.gifLink}
+  
+              /> : null)}
               </div>
               
               
+             
               
 
             ))}
@@ -134,7 +158,7 @@ export class Bears extends Component {
 
           ))}
            
-
+            
 
             </React.Fragment>
             

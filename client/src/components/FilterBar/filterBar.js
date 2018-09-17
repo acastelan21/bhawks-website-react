@@ -58,7 +58,7 @@ export default class FilterBar extends React.Component {
             </DropdownToggle>
             <DropdownMenu>
               
-              <DropdownItem>2018</DropdownItem>
+              <DropdownItem value ={this.props.season1} onClick={this.props.toggleFilter}>{this.props.season1}</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpenName} toggle={this.toggleName}>
@@ -68,12 +68,12 @@ export default class FilterBar extends React.Component {
             
             <DropdownMenu>
               
-                <DropdownItem >{this.props.player1}</DropdownItem>
-                <DropdownItem >{this.props.player2}</DropdownItem>
-                <DropdownItem>{this.props.player3}</DropdownItem>
-                <DropdownItem>{this.props.player4}</DropdownItem>
-                <DropdownItem>{this.props.player5}</DropdownItem>
-                <DropdownItem>{this.props.player6}</DropdownItem>
+                <DropdownItem value ={this.props.player1} onClick={this.props.toggleFilter} >{this.props.player1}</DropdownItem>
+                <DropdownItem value ={this.props.player2} onClick={this.props.toggleFilter}>{this.props.player2}</DropdownItem>
+                <DropdownItem value ={this.props.player3} onClick={this.props.toggleFilter} >{this.props.player3}</DropdownItem>
+                <DropdownItem value ={this.props.player4} onClick={this.props.toggleFilter} >{this.props.player4}</DropdownItem>
+                <DropdownItem value ={this.props.player5} onClick={this.props.toggleFilter} >{this.props.player5}</DropdownItem>
+                <DropdownItem value ={this.props.player6} onClick={this.props.toggleFilter} >{this.props.player6}</DropdownItem>
                 
               
             </DropdownMenu>
@@ -83,7 +83,7 @@ export default class FilterBar extends React.Component {
               Opponent
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem>{this.props.opponent1}</DropdownItem>
+              <DropdownItem value ={this.props.opponent1} onClick={this.props.toggleFilter}>{this.props.opponent1}</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpenPosition} toggle={this.togglePosition}>
@@ -91,11 +91,11 @@ export default class FilterBar extends React.Component {
               Position
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem>{this.props.position1}</DropdownItem>
-              <DropdownItem>{this.props.position2}</DropdownItem>
-              <DropdownItem>{this.props.position3}</DropdownItem>
-              <DropdownItem>{this.props.position4}</DropdownItem>
-              <DropdownItem>{this.props.position5}</DropdownItem>
+              <DropdownItem value={this.props.position1} onClick={this.props.toggleFilter}>{this.props.position1}</DropdownItem>
+              <DropdownItem value ={this.props.position2} onClick={this.props.toggleFilter}>{this.props.position2}</DropdownItem>
+              <DropdownItem value ={this.props.position3} onClick={this.props.toggleFilter}>{this.props.position3}</DropdownItem>
+              <DropdownItem value ={this.props.position4} onClick={this.props.toggleFilter}>{this.props.position4}</DropdownItem>
+              <DropdownItem value ={this.props.position5} onClick={this.props.toggleFilter}>{this.props.position5}</DropdownItem>
               
             </DropdownMenu>
           </Dropdown>
@@ -104,11 +104,11 @@ export default class FilterBar extends React.Component {
               Highlights
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem>{this.props.highlight1}</DropdownItem>
-              <DropdownItem>{this.props.highlight2}</DropdownItem>
-              <DropdownItem>{this.props.highlight3}</DropdownItem>
-              <DropdownItem>{this.props.highlight4}</DropdownItem>
-              <DropdownItem>{this.props.highlight5}</DropdownItem>
+              <DropdownItem value ={this.props.highlight2} onClick={this.props.toggleFilter}>{this.props.highlight1}</DropdownItem>
+              <DropdownItem value ={this.props.highlight2} onClick={this.props.toggleFilter}>{this.props.highlight2}</DropdownItem>
+              <DropdownItem value ={this.props.highlight3} onClick={this.props.toggleFilter}>{this.props.highlight3}</DropdownItem>
+              <DropdownItem value ={this.props.highlight4} onClick={this.props.toggleFilter}>{this.props.highlight4}</DropdownItem>
+              <DropdownItem value ={this.props.highlight5} onClick={this.props.toggleFilter}>{this.props.highlight5}</DropdownItem>
              
             </DropdownMenu>
           </Dropdown>
