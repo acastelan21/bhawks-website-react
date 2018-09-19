@@ -16,10 +16,6 @@ export class NavBar extends Component {
                     <Link to="/blackhawks">Blackhawks</Link>
                     <Link to="/contact-us">Contact Us</Link>
                     <Link to="/about-us"> About Us</Link>
-                <form className="form-inline">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button className="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </nav>
         </div>
         <div className="row" id="top-bottom-nav"></div>

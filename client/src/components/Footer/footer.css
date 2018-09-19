@@ -4,6 +4,7 @@
     bottom:0;
     width:101%;
     clear:both;
+    position: relative;
 }
 .col-12 a {
     margin: 1em;
