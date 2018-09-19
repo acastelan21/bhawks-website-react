@@ -10,7 +10,7 @@ const PlayerCard =(props) => {
         <Card>
         <CardBody>
        <CardTitle>{props.player} | {props.position} | #{props.number} </CardTitle>
-       <CardSubtitle> Season: {props.season}| Date: {props.date} |</CardSubtitle>
+       <CardSubtitle> Season: {props.season}| Date: {props.date} </CardSubtitle>
        <CardSubtitle> {props.highlight} Vs. {props.opponent} </CardSubtitle>
      </CardBody>
      <CardImg top width="50%" src={props.gifLink} alt="Card image cap" />

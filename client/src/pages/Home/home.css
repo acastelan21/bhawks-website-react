@@ -2,3 +2,40 @@
     width: 100%;
 
 }
+
+.jumbotron {
+    text-align: center;
+    margin-top: 2em;
+    background-color: #58B9F7;
+}
+.display-3 , .lead {
+    background: hsla(0, 100%, 50%, 0.8);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #58B9F7;
+    border-color:red
+}
+
+.bearsRow img {
+    height:15rem;
+    width:15rem;
+  
+  
+
+}
+
+.jumbotron .card {
+    align-items: center;
+    width:25%; 
+    height: 100%;
+    margin:auto;
+    margin-top: .5rem
+}
+
+.btn-secondary:hover {
+
+    background-color: red
+
+}
