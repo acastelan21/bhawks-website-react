@@ -2,10 +2,9 @@
   "name": "chicagosportsgifs",
   "version": "1.0.0",
   "description": "fansite to show gifs and other info",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "install": "cd client && yarn install",
     "build": "cd client && yarn run build",
     "heroku-postbuild":"yarn run build"
