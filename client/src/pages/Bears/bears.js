@@ -73,6 +73,8 @@ export class Bears extends Component {
       this.setState({positions:positionsForState})
       this.setState({opponents:opponentsForState})
       this.setState({highlights:highlightsForState})
+    }).catch((error)=>{
+      console.log(error)
     })
 
   }
