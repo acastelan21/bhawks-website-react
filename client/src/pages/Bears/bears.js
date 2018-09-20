@@ -38,7 +38,7 @@ export class Bears extends Component {
       }]
     }
 
-    API.insertInfo(theGoods).then((response)=>{
+    API.insertInfo(theGoods).then((response)=>{console.log("response", response)
       console.log("the goods were delivered")
     })
   }
