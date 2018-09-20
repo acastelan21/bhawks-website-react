@@ -9,12 +9,18 @@ const dbController = require("./controllers/dbController")
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.post("/api/database", dbController.insert)
-app.get("/api/database", dbController.findAnswers)
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+app.post("/api/database", dbController.insert)
+app.get("/api/database", dbController.findAnswers)
+
+
+
+app.use(function(req,res){
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
+})
 
 const db = process.env.MONGODB_URI || "mongodb://localhost:27017/chicago-sports-website";
 mongoose.connect(db, function(error){
