@@ -20,7 +20,9 @@ export class Bears extends Component {
     this.toggleFilter = this.toggleFilter.bind(this)
   }
   componentWillMount(){
+    this.testAdding()
     this.makeArraysForState()
+    
   }
   testAdding = () => {
     let theGoods = {
