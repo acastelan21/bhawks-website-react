@@ -33,7 +33,7 @@ class App extends Component {
               <Route exact path="/blackhawks" component={Blackhawks}/>
               <Route path="/contact-us" component={ContactUs}/>
               <Route path="/about-us" component={AboutUs}/>
-              <Route component={Page404}/>
+              {/* <Route component={Page404}/> */}
             </Switch>
             <Footer/>
               

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import API from "../../utils/API";
 import FilterBar from "../../components/FilterBar";
 import {BearsContext} from "../../contexts/bearsProviders";
 import PlayerCard from "../../components/PlayerCard";
@@ -19,7 +20,27 @@ export class Bears extends Component {
     this.toggleFilter = this.toggleFilter.bind(this)
   }
   componentWillMount(){
+    this.testAdding()
     this.makeArraysForState()
+    
+  }
+  testAdding = () => {
+    let theGoods = {
+      player: "Kaner",
+      position: "W",
+      number: "88",
+      gifs :[{
+        season:"2018",
+        highlight:"goal",
+        gifLink:"example.com",
+        date:"08-09-2010",
+        opponent: "nashville"
+      }]
+    }
+
+    API.insertInfo(theGoods).then((response)=>{console.log("response", response)
+      console.log("the goods were delivered")
+    })
   }
   toggleFilter(event){
     this.setState({filterByInUse: true,
