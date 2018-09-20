@@ -22,7 +22,7 @@ app.use(function(req,res){
   res.sendFile(path.join(__dirname, "client/build/index.html"));
 })
 
-const db = process.env.MONGODB_URI || "mongodb://localhost:27017/chicago-sports-website";
+const db = process.env.MONGODB_URI || "mongodb://chicagosportsgifs:password1@ds263642.mlab.com:63642/heroku_xp1w9n4x"
 mongoose.connect(db,{useNewUrlParser:true}, function(error){
   if (error){
     console.error(error);
