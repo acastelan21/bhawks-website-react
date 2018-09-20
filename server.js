@@ -18,8 +18,8 @@ app.get("/api/database", dbController.findAnswers)
 
 
 
-app.get("*", (req,res)=>{
-  res.sendFile(path.join(__dirname, "client/build","index.html"));
+app.use(function(req,res){
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
 })
 
 const db = process.env.MONGODB_URI || "mongodb://localhost:27017/chicago-sports-website";
