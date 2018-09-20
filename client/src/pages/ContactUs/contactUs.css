@@ -19,3 +19,10 @@
 .btn:hover {
     background: gray;
 }
+
+.contactUs .section-title {
+    text-align: center;
+    margin-top: 1em;
+
+    text-decoration: underline;
+}
