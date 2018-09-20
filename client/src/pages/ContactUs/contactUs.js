@@ -4,7 +4,7 @@ export class ContactUs extends Component {
   render() {
     return (
 <div className="page contactUs">
-<h2 class="section-title"><span>Contact Me</span></h2>
+<h2 className="section-title"><span>Contact Us</span></h2>
 
   <form id="contact-form" method="POST" action="https://formspree.io/alvaro.castelan.21@gmail.com">
       
