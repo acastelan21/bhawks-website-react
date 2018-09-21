@@ -20,8 +20,8 @@ export class Bears extends Component {
     this.toggleFilter = this.toggleFilter.bind(this)
   }
   componentWillMount(){
-    this.testAdding()
-    this.makeArraysForState()
+    this.testAdding();
+    this.makeArraysForState();
     
   }
   testAdding = () => {
@@ -41,6 +41,8 @@ export class Bears extends Component {
 
     API.insertInfo(theGoods).then((response)=>{console.log("response", response)
       console.log("the goods were delivered")
+    }).catch(error=>{
+console.log(error)
     })
   }
   toggleFilter(event){
