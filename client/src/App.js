@@ -11,7 +11,7 @@ import history from "./history";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Page404 from "./pages/Page404";
-import BearsProvider from "./contexts/bearsProviders";
+
 
 class App extends Component {
   render() {
@@ -24,7 +24,7 @@ class App extends Component {
           <NavBar/>
           <div className="OverallContainer">
 
-            <BearsProvider>
+       
               
               
             <Switch>
@@ -33,11 +33,11 @@ class App extends Component {
               <Route exact path="/blackhawks" component={Blackhawks}/>
               <Route path="/contact-us" component={ContactUs}/>
               <Route path="/about-us" component={AboutUs}/>
-              {/* <Route component={Page404}/> */}
+              <Route component={Page404}/>
             </Switch>
             <Footer/>
               
-            </BearsProvider>
+           
            
           </div>
           </React.Fragment>

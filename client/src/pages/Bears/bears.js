@@ -20,31 +20,12 @@ export class Bears extends Component {
     this.toggleFilter = this.toggleFilter.bind(this)
   }
   componentWillMount(){
-    this.testAdding();
+    
     this.makeArraysForState();
     
   }
-  testAdding = () => {
-    let theGoods = {
-      _id: 345452,
-      player: "Kaner",
-      position: "W",
-      number: "88",
-      gifs :[{
-        season:"2018",
-        highlight:"goal",
-        gifLink:"example.com",
-        date:"08-09-2010",
-        opponent: "nashville"
-      }]
-    }
-
-    API.insertInfo(theGoods).then((response)=>{console.log("response", response)
-      console.log("the goods were delivered")
-    }).catch(error=>{
-console.log(error)
-    })
-  }
+  
+  
   toggleFilter(event){
     this.setState({filterByInUse: true,
                    filterBy: event.target.value

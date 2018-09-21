@@ -20,7 +20,7 @@ app.get("*", (req, res) => {
 });
 
 const db = process.env.MONGODB_URI || "mongodb://localhost:27017/chicago-sports-website";
-mongoose.connect(db, function(error){
+mongoose.connect(db, {useNewUrlParser: true},function(error){
   if (error){
     console.error(error);
   }
