@@ -26,6 +26,7 @@ export class Bears extends Component {
   }
   testAdding = () => {
     let theGoods = {
+      _id: 345452,
       player: "Kaner",
       position: "W",
       number: "88",
