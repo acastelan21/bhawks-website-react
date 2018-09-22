@@ -11,7 +11,9 @@
 .navbar a {
     color: #CC0000;
 }
-
+.navbar-brand{
+    font-weight: bolder
+}
 
 .form-control {
     color: #CC0000;

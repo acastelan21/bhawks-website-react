@@ -22,24 +22,24 @@ export class Footer extends Component {
                 
             </div>
         </div>
+        {/* copyright */}
+        <div className="row">
+        <div className="col-12">
+        <a href="alvarocastelan.com">Created by: &copy; 2018 Alvaro Castelan</a>
+        </div>
+   
+       </div>
         {/* social media */}
         <div className="row">
             <div className="col-12">
                 <div className="social-icon">
-                        <a href="/"><span><i className="fab fa-twitter-square fa-2x" aria-hidden="true"></i></span></a>
-                        <a href="/"><span><i className="fab fa-facebook-square fa-2x" aria-hidden="true"></i></span></a>
-                        <a href="/"><span><i className="fab fa-instagram fa-2x" aria-hidden="true"></i></span></a>
+                        <a href="https://www.linkedin.com/in/alvarocastelan/"><span><i className="fab fa-linkedin-in fa-2x" aria-hidden="true"></i></span></a>
+                        <a href="https://github.com/acastelan21"><span><i className="fab fa-github fa-2x" aria-hidden="true"></i></span></a>
+                        <a href="alvarocastelan.com"><span><i className="fas fa-desktop fa-2x" aria-hidden="true"></i></span></a>
                 </div>
             
             </div>
         </div>
-        {/* copyright */}
-        <div className="row">
-        <div className="col-12">
-        <a href="alvarocastelan.com">&copy; 2018 Alvaro Castelan</a>
-        </div>
-   
-       </div>
       </div>
     )
   }
