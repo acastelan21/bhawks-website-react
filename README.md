@@ -6,7 +6,7 @@ This a single-page application that shows you sports highlights for the Chicago 
 I created this project in order to continue practicing building React apps.
 
 ## Deployed Website
-You can see the deployed website [Here](https://chicago-sports-gifs.herokuapp.com/)
+You can see the deployed website [here](https://chicago-sports-gifs.herokuapp.com/)
 
 ## Built With
 + MongoDB 

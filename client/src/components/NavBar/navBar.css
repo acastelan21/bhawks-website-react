@@ -12,7 +12,8 @@
     color: #CC0000;
 }
 .navbar-brand{
-    font-weight: bolder
+    font-weight: bolder;
+    margin-left: -5em;
 }
 
 .form-control {
@@ -21,7 +22,10 @@
 
 }
 
-.badge-danger{
-    font-size: 1.2em;
+.navbar{
+    justify-content: space-evenly
 }
-
+.star {
+    height:5em;
+    background: #CC0000
+}

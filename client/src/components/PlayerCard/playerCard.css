@@ -6,3 +6,17 @@
 .card-subtitle {
     margin-top: -.2rem;
 }
+
+.card-footer .btn-info {
+    margin-right: 2em;
+    font-family: 'Muli', sans-serif ;
+}
+
+.btn-info:focus{
+    box-shadow: none;
+    
+}
+
+.btn-info{
+    background-color: #58b9f7;
+}

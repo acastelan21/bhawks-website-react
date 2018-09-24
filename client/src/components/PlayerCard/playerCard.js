@@ -13,7 +13,7 @@ const PlayerCard =(props) => {
        <CardSubtitle> {props.highlight} Vs. {props.opponent} </CardSubtitle>
      </CardBody>
      <CardImg top width="50%" src={props.gifLink} alt="Card image cap" />
-     <CardFooter><Button name={props.player} value={props.identifier} onClick={props.addLike} color="info">Like</Button>{props.likes} </CardFooter>
+     <CardFooter><Button name={props.player} value={props.identifier} onClick={props.addLike} color="info"><i className="far fa-thumbs-up"> </i> Like</Button>{props.likes} Likes</CardFooter>
      
    </Card>
     )
