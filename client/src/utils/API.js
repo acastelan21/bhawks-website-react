@@ -8,6 +8,11 @@ const API = {
     findInfo : () => {
         console.log("finding info in util api")
         return axios.get("/api/answersKey")
+    },
+    updateLikes: (sendObj)=> {
+        console.log("updating likes in DB (Api utils)")
+        console.log("sendobj", sendObj)
+        return axios.post("/api/likes", sendObj)
     }
 
 }

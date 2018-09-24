@@ -13,5 +13,12 @@ module.exports = {
         dbData.create(req.body).then(doc=>{
             res.json(doc)
         })
+    },
+    addLike : function(req, res){
+        console.log("updating likes to database");
+        console.log(req.body)
+        dbData.update({"gifs.identifier":req.body.identifier},{$inc: {"gifs.$.likes":1}}).then(doc => {
+            res.send(doc)
+        })
     }
 }

@@ -9,6 +9,7 @@ export class Bears extends Component {
   constructor(props){
     super(props)
     this.state={
+      data:[],
       players:[],
       seasons:[],
       positions:[],
@@ -32,6 +33,21 @@ export class Bears extends Component {
     })
     
   }
+  addLike=(event)=>{
+    
+    console.log(event.target.value)
+   const likeUpdaters = {player: event.target.name,
+                          identifier: event.target.value}
+
+    API.updateLikes(likeUpdaters).then(res=>{
+    console.log(res);
+    if (res.status === 200){
+      console.log("yay")
+    }
+    ;
+  }) 
+
+  }
    makeArraysForState = () => {
      //make axios call to database to retrieve data
     axios.get("/api/database").then((res)=>{
@@ -47,7 +63,7 @@ export class Bears extends Component {
       
 
       }
-      this.setState({players:playersForState})
+      this.setState({players:playersForState,data:res.data})
       
       //creating a set so it convert to array to send to set state
       let positionsForArray = new Set();
@@ -138,6 +154,9 @@ export class Bears extends Component {
           opponent={nested.opponent}
           highlight={nested.highlight}
           gifLink={nested.gifLink}
+          likes = {nested.likes}
+          addLike={this.addLike}
+          identifier={nested.identifier}
 
             />
             : (this.state.filterBy ===""? <PlayerCard
@@ -150,6 +169,9 @@ export class Bears extends Component {
             opponent={nested.opponent}
             highlight={nested.highlight}
             gifLink={nested.gifLink}
+            likes = {nested.likes}
+            addLike={this.addLike}
+            identifier={nested.identifier}
   
               /> : null)}
               </div>

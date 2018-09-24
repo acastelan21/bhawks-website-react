@@ -7,11 +7,14 @@ const dbDataSchema = new Schema({
     position: String,
     number: String,
     gifs: [{
+
+        identifier:String,
         season: String,
         highlight: String,
         gifLink: String,
         date: String,
-        opponent: String
+        opponent: String,
+        likes: Number
     }]
     
 })

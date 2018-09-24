@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 app.post("/api/database", dbController.insert)
 app.get("/api/database", dbController.findAnswers)
+app.post("/api/likes", dbController.addLike)
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

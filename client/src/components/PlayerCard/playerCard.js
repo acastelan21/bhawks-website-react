@@ -1,11 +1,10 @@
 import React from 'react'
 import { Card, CardImg, CardBody,
-    CardTitle, CardSubtitle} from 'reactstrap'; 
+    CardTitle, CardSubtitle, CardFooter, Button} from 'reactstrap'; 
 import "./playerCard.css";
 
 
 const PlayerCard =(props) => {
-  
     return (
         <Card>
         <CardBody>
@@ -14,6 +13,7 @@ const PlayerCard =(props) => {
        <CardSubtitle> {props.highlight} Vs. {props.opponent} </CardSubtitle>
      </CardBody>
      <CardImg top width="50%" src={props.gifLink} alt="Card image cap" />
+     <CardFooter><Button name={props.player} value={props.identifier} onClick={props.addLike} color="info">Like</Button>{props.likes} </CardFooter>
      
    </Card>
     )
