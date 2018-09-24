@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import API from "../../utils/API";
 import FilterBar from "../../components/FilterBar";
-import {BearsContext} from "../../contexts/bearsProviders";
+
 import PlayerCard from "../../components/PlayerCard";
 import "./bears.css"
 import axios from "axios";
@@ -42,11 +42,16 @@ export class Bears extends Component {
     API.updateLikes(likeUpdaters).then(res=>{
     console.log(res);
     if (res.status === 200){
-      console.log("yay")
+      this.resetState();
     }
     ;
   }) 
 
+  }
+  resetState = () => {
+    axios.get("/api/database").then((res)=>{
+      this.setState({data:res.data})
+    })
   }
    makeArraysForState = () => {
      //make axios call to database to retrieve data
@@ -131,16 +136,10 @@ export class Bears extends Component {
       
 
 
-      <BearsContext.Consumer>
-        {(context) => (
-          <React.Fragment>
-          
-            
-            {/* The first map to access first level of array of data in state */}
-          {context.BearsData.allData.map((info, i)=> (
+          {this.state.data.map((info, i)=> (
            
             <div key={i}>
-            {/* the second map is to access the nested array inside data of state */}
+         
             {info.gifs.map((nested,j,k)=>(
               <div key={j} >
               {info.player === this.state.filterBy || info.position ===this.state.filterBy || nested.season===this.state.filterBy || nested.opponent ===this.state.filterBy || nested.highlight === this.state.filterBy ? 
@@ -189,15 +188,15 @@ export class Bears extends Component {
            
             
 
-            </React.Fragment>
+            
             
 
           
           
          
-        )}
+        
        
-      </BearsContext.Consumer> 
+      
       </div>
     )
   }
