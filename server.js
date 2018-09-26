@@ -5,21 +5,21 @@ const app = express();
 const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3001;
-app.use(express.static(path.join(__dirname, 'build')));
+
 
 
 const dbController = require("./controllers/dbController")
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(express.static("client/build")); 
 
 app.post("/api/database", dbController.insert)
 app.get("/api/database", dbController.findAnswers)
 app.post("/api/likes", dbController.addLike)
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
+app.use(function(req,res){
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
+})
 const db = process.env.MONGODB_URI || "mongodb://localhost:27017/chicago-sports-website";
 mongoose.connect(db, {useNewUrlParser: true},function(error){
   if (error){
