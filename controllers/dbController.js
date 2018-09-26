@@ -18,7 +18,7 @@ module.exports = {
         console.log("updating likes to database");
         console.log(req.body)
         dbData.update({"gifs.identifier":req.body.identifier},{$inc: {"gifs.$.likes":1}}).then(doc => {
-            res.send(doc)
+            console.log("update likes")
         })
     }
 }
