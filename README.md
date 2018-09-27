@@ -19,4 +19,4 @@ You can see the deployed website [here](https://chicago-sports-gifs.herokuapp.co
 
 
 ## Author(s)
-Alvaro Castelan | [LinkedIn](https://www.linkedin.com/in/alvarocastelan) | [Portfolio](alvarocastelan.com)
+Alvaro Castelan | [LinkedIn](https://www.linkedin.com/in/alvarocastelan) | [Portfolio](https://www.alvarocastelan.com)
